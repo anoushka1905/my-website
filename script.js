@@ -1,28 +1,4 @@
-// Theme Toggle Functionality
-const themeToggle = document.getElementById('theme-toggle');
-const body = document.body;
-
-// Check for saved theme preference or default to normal theme
-const currentTheme = localStorage.getItem('theme') || 'normal';
-if (currentTheme === 'blue') {
-    body.classList.add('blue-theme');
-}
-
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('blue-theme');
-    
-    // Save theme preference
-    const newTheme = body.classList.contains('blue-theme') ? 'blue' : 'normal';
-    localStorage.setItem('theme', newTheme);
-    
-    // Add a cool animation effect
-    themeToggle.style.transform = 'scale(1.2) rotate(360deg)';
-    setTimeout(() => {
-        themeToggle.style.transform = '';
-    }, 300);
-});
-
-// Typewriter Effect
+// Typewriter effect for name
 function typeWriter(element, text, speed = 100) {
     let i = 0;
     element.innerHTML = '';
@@ -50,22 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
-
-// Smooth Scrolling for Navigation Links
+// Simple smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -79,67 +40,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar Background on Scroll
+// Simple navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    const isBlueTheme = document.body.classList.contains('blue-theme');
     
-    if (window.scrollY > 100) {
-        if (isBlueTheme) {
-            navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        }
+    if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
     } else {
-        if (isBlueTheme) {
-            navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        }
+        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
     }
 });
 
-// Simple fade-in animation for sections
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe elements for animation
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.experience-card, .course-item, .project-item, .gallery-item');
+// Toggle experience details
+function toggleDetails(header) {
+    const details = header.nextElementSibling;
+    const icon = header.querySelector('.toggle-icon');
     
-    animatedElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-});
-
-// Simple hover effects
-document.querySelectorAll('.experience-card, .course-item, .project-item, .gallery-item').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-4px)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
-});
-
-// Console welcome message
-console.log(`
-✨ welcome to the portfolio
-📝 clean and minimalistic design
-🎨 blue theme with lowercase styling
-`); 
+    if (details.classList.contains('collapsed')) {
+        details.classList.remove('collapsed');
+        details.classList.add('expanded');
+        icon.textContent = '−';
+    } else {
+        details.classList.remove('expanded');
+        details.classList.add('collapsed');
+        icon.textContent = '+';
+    }
+}

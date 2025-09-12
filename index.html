@@ -3,201 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>anoushka</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Minimal Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">
-                <!-- Remove the logo-text span entirely if empty -->
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">work experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#academic" class="nav-link">academic</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="pics.html" class="nav-link" target="_blank">pics & stuff</a>
-                </li>
-                <li class="nav-item">
-                    <a href="blog.html" class="nav-link" target="_blank">blog</a>
-                </li>
-                <li class="nav-item">
-                    <button id="theme-toggle" class="theme-btn">
-                        <i class="fas fa-palette"></i>
-                    </button>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="extras.html">Extras</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title" id="typewriter">hello, i'm anoushka</h1>
-                <p class="hero-subtitle">mechanical engineer</p>
+    <!-- Header -->
+    <header id="home" class="header">
+        <div class="header-content">
+            <h1 id="typewriter">hello, i'm anoushka</h1>
+            <p>Mechanical Engineer</p>
+            <div class="header-btn">
+                <a href="ab resume final 1.pdf" class="btn" target="_blank">View Resume</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">resume</h2>
-            <div class="resume-content">
-                <div class="resume-download">
-                    <a href="ab resume final 1.pdf" class="btn btn-primary" target="_blank">
-                        <i class="fas fa-eye"></i>
-                        view resume
-                    </a>
-                </div>
-                <div class="resume-preview">
-                    <div class="resume-section">
-                        <h3>skills</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">solidworks</span>
-                            <span class="skill-tag">autocad</span>
-                            <span class="skill-tag">matlab</span>
-                            <span class="skill-tag">python</span>
-                            <span class="skill-tag">3d printing</span>
-                            <span class="skill-tag">prototyping</span>
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About</h2>
+                    <p>Mechanical engineering student at University of Massachusetts Amherst, passionate about design, innovation, and recycling.</p>
+                    
+                    <h3>Experience</h3>
+                    <div class="experience-list">
+                        <div class="experience-item">
+                            <div class="experience-header" onclick="toggleDetails(this)">
+                                <strong>Mechanical Engineering Intern</strong>
+                                <span>Indorama Ventures Vietnam • Dec 2023 - Feb 2024 • Ho Chi Minh City, Vietnam</span>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <ul class="experience-details collapsed">
+                                <li>Worked at an injection molding factory specializing in the production of PET bottles and caps for the beverage and packaging industry</li>
+                                <li>Shadowed the Production Manager on the shop floor to gain firsthand experience with large-scale manufacturing operations and daily process management</li>
+                                <li>Studied the PET preform production process using Husky injection molding machines, learning how raw resin is transformed and how critical parameters affect output quality</li>
+                                <li>Observed and assisted in defect detection and analysis, including common faults like short shots, flash, or stress marks, and how they're addressed through real-time quality control and process adjustments</li>
+                                <li>Gained hands-on exposure to the blow molding process using the ECH-LONG 5th Blowing Machine CPX06, understanding the function of hot half/cold half mold systems in bottle shaping and pressurization</li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Work Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">work experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>mechanical engineering intern</h3>
-                        <span class="company">indorama ventures vietnam</span>
-                        <span class="duration">dec 2023 - feb 2024</span>
-                    </div>
-                    <ul class="experience-details">
-                        <li>worked at injection molding factory specializing in pet bottles and caps</li>
-                        <li>shadowed production manager on shop floor for large-scale manufacturing operations</li>
-                        <li>studied pet preform production using husky injection molding machines</li>
-                        <li>gained hands-on exposure to blow molding process and quality control</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>office assistant</h3>
-                        <span class="company">isenberg school of management, umass amherst</span>
-                        <span class="duration">sep 2022 - dec 2022</span>
-                    </div>
-                    <ul class="experience-details">
-                        <li>supported daily operations at berthiaume center with administrative tasks</li>
-                        <li>assisted in planning and execution of center-hosted events</li>
-                        <li>managed scheduling, front-desk coverage, and inventory management</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>internship project</h3>
-                        <span class="company">general mills</span>
-                        <span class="duration">may 2022 - aug 2022</span>
-                    </div>
-                    <ul class="experience-details">
-                        <li>developed loyalty program strategy for bakeries and foodservice division</li>
-                        <li>conducted comprehensive secondary research and primary interviews</li>
-                        <li>delivered strategic toolkit with three loyalty program models</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>co-founder</h3>
-                        <span class="company">major key magazine</span>
-                        <span class="duration">jun 2020 - sep 2021</span>
-                    </div>
-                    <ul class="experience-details">
-                        <li>co-founded student-led music and pop culture publication</li>
-                        <li>oversaw editorial direction and collaborated on visual design</li>
-                        <li>expanded platform presence through instagram and email outreach</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>freelance writer</h3>
-                        <span class="company">okti foundation</span>
-                        <span class="duration">jan 2021 - jun 2021</span>
-                    </div>
-                    <ul class="experience-details">
-                        <li>researched and authored paper on mental illness and reproductive rights</li>
-                        <li>conducted weekly visits to long-term care facility for interviews</li>
-                        <li>explored medical ethics and challenges in supporting motherhood</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>content writer</h3>
-                        <span class="company">the newston</span>
-                        <span class="duration">dec 2019 - may 2021</span>
-                    </div>
-                    <ul class="experience-details">
-                        <li>weekly content creator for blog, magazine, and instagram</li>
-                        <li>focused on emerging innovations and scientific developments</li>
-                        <li>crafted engaging, science-based content for social media</li>
-                    </ul>
-                </div>
-                
-                <div class="experience-card">
-                    <div class="experience-header">
-                        <h3>social media coordinator</h3>
-                        <span class="company">mission medication</span>
-                        <span class="duration">jan 2020 - jun 2020</span>
-                    </div>
-                    <ul class="experience-details">
-                        <li>managed daily content for healthcare access initiative</li>
-                        <li>created educational posts and advocacy campaigns</li>
-                        <li>raised awareness about medication affordability</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Academic Section -->
-    <section id="academic" class="academic">
-        <div class="container">
-            <h2 class="section-title">academic</h2>
-            <div class="academic-content">
-                <div class="academic-section">
-                    <h3>education</h3>
-                    <div class="academic-item">
-                        <h4>bachelor of science in mechanical engineering</h4>
-                        <p class="institution">university of massachusetts amherst</p>
-                        <p class="year">anticipated may 2026</p>
-                        <p class="gpa">gpa: 2.9</p>
+                        <div class="experience-item">
+                            <div class="experience-header" onclick="toggleDetails(this)">
+                                <strong>Office Assistant</strong>
+                                <span>Isenberg School of Management, UMass Amherst • Sep 2022 - Dec 2022 • Amherst, Massachusetts</span>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <ul class="experience-details collapsed">
+                                <li>Supported daily operations at the Berthiaume Center by handling administrative tasks such as creating spreadsheets, managing forms, tracking member logistics, and maintaining internal records</li>
+                                <li>Assisted in the planning and execution of centre-hosted events, including setting up venues, organizing materials, and helping ensure smooth day-of operations</li>
+                                <li>Also responsible for general office support tasks including scheduling, front-desk coverage, printing, and inventory management, contributing to the center's efficient day-to-day functioning</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-header" onclick="toggleDetails(this)">
+                                <strong>Internship Project</strong>
+                                <span>General Mills • May 2022 - Aug 2022 • Gurugram, Haryana, India</span>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <ul class="experience-details collapsed">
+                                <li>Worked on developing a loyalty program strategy for the General Mills India Bakeries and Foodservice division</li>
+                                <li>Conducted comprehensive secondary research using digital tools and industry sources to benchmark loyalty, referral, and rewards programs across FMCG and related sectors</li>
+                                <li>Engaged in primary research by interviewing freelance bakers, single-outlet bakeries, and larger multi-branch operations to gather practical insights on loyalty trends and challenges</li>
+                                <li>Delivered a strategic toolkit recommending three loyalty program models, potential business impact, and an implementation roadmap through the upcoming General Mills Bakers App</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-header" onclick="toggleDetails(this)">
+                                <strong>Co-Founder</strong>
+                                <span>Major Key Magazine • Jun 2020 - Sep 2021 • India</span>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <ul class="experience-details collapsed">
+                                <li>Co-founded Major Key Magazine, a student-led music and pop culture publication aimed at creating a safe, inclusive space for young musicians and creatives</li>
+                                <li>Oversaw editorial direction, selected article topics, and collaborated on visual design for four themed issues, each featuring up to 12 original pieces</li>
+                                <li>Expanded the platform's presence through Instagram-based content and email outreach, transitioning the magazine into a creative collective supporting small artists with services like social media marketing and cover art design</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-header" onclick="toggleDetails(this)">
+                                <strong>Freelance Writer</strong>
+                                <span>Okti Foundation • Jan 2021 - Jun 2021 • Delhi, India</span>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <ul class="experience-details collapsed">
+                                <li>Researched and authored a paper on the intersection of mental illness, reproductive rights, and medical ethics in India, with a focus on the use of vaginal hysterectomies among women living with severe mental health conditions</li>
+                                <li>Conducted weekly visits to a long-term care facility for women who had been abandoned by their families due to stigma surrounding mental illness</li>
+                                <li>Built personal connections, conducted interviews, and gathered qualitative data to understand the lived experiences of the residents</li>
+                                <li>Explored the facility's controversial decision to perform hysterectomies in response to recurring cases of unwanted pregnancies, which would often result from sexual abuse or lack of access to contraception</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-header" onclick="toggleDetails(this)">
+                                <strong>Content Writer</strong>
+                                <span>The Newston • Dec 2019 - May 2021 • Gurugram, Haryana, India</span>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <ul class="experience-details collapsed">
+                                <li>Weekly content creator and curator for The Newston's blog, magazine, and Instagram page, focusing on emerging innovations and scientific developments</li>
+                                <li>Wrote feature articles for published issues and crafted engaging, science-based content tailored for social media</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-header" onclick="toggleDetails(this)">
+                                <strong>Social Media Coordinator</strong>
+                                <span>Mission Medication • Jan 2020 - Jun 2020 • Gurugram, Haryana, India</span>
+                                <span class="toggle-icon">+</span>
+                            </div>
+                            <ul class="experience-details collapsed">
+                                <li>Managed daily content for Mission Medication's Instagram as part of a student-led initiative focused on healthcare access and equity</li>
+                                <li>Created educational posts, infographics, and advocacy campaigns to raise awareness about medication affordability and support community outreach</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -207,78 +135,38 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">final academic projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>mie 201 final hea report</h3>
-                        <span class="course">mie 201</span>
-                        <span class="semester">spring 2024</span>
-                    </div>
-                    <p class="project-description">heat exchanger analysis and optimization project</p>
-                    <a href="final projects/MIE 201_ Final HEA Report.pdf" class="btn btn-secondary" target="_blank">
-                        <i class="fas fa-file-pdf"></i>
-                        view report
-                    </a>
+            <h2>Projects</h2>
+            <div class="projects-list">
+                <div class="project-item">
+                    <h3>MIE 201 Final HEA Report</h3>
+                    <p>Heat exchanger analysis and optimization project</p>
+                    <a href="final projects/MIE 201_ Final HEA Report.pdf" target="_blank">View Report</a>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>mie 422 report final</h3>
-                        <span class="course">mie 422</span>
-                        <span class="semester">spring 2024</span>
-                    </div>
-                    <p class="project-description">advanced mechanical engineering design project</p>
-                    <a href="final projects/mie 422_ report final.pdf" class="btn btn-secondary" target="_blank">
-                        <i class="fas fa-file-pdf"></i>
-                        view report
-                    </a>
+                <div class="project-item">
+                    <h3>MIE 422 Report Final</h3>
+                    <p>Advanced mechanical engineering design project</p>
+                    <a href="final projects/mie 422_ report final.pdf" target="_blank">View Report</a>
                 </div>
-                
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>mie 313 final project report</h3>
-                        <span class="course">mie 313</span>
-                        <span class="semester">spring 2024</span>
-                    </div>
-                    <p class="project-description">mechanical systems and controls project</p>
-                    <a href="final projects/MIE 313_ Final Project Report (2).pdf" class="btn btn-secondary" target="_blank">
-                        <i class="fas fa-file-pdf"></i>
-                        view report
-                    </a>
+                <div class="project-item">
+                    <h3>MIE 313 Final Project Report</h3>
+                    <p>Mechanical systems and controls project</p>
+                    <a href="final projects/MIE 313_ Final Project Report (2).pdf" target="_blank">View Report</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">portfolio</span>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">home</a>
-                    <a href="#experience">experience</a>
-                    <a href="#academic">academic</a>
-                    <a href="#projects">projects</a>
-                    <a href="pics.html" target="_blank">pics & stuff</a>
-                    <a href="blog.html" target="_blank">blog</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/anoushka-bhardwaj-173069216/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 anoushka. all rights reserved.</p>
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/anoushka-bhardwaj-173069216/" target="_blank">LinkedIn</a>
+                <a href="mailto:your-email@example.com">Email</a>
             </div>
         </div>
-    </footer>
+    </section>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
