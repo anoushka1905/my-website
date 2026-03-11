@@ -126,9 +126,10 @@ section h2 {
     align-items: flex-start;
 }
 
-.about-text {
-    max-width: 800px;
-    width: 100%;
+.about-text p {
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 18px;
 }
 
 .about-text h3 {
@@ -468,4 +469,5 @@ section h2 {
     .construction-content p {
         font-size: 1rem;
     }
+
 }
